@@ -52,11 +52,7 @@ class InteractiveRecord
   end
   
   def self.find_by(attribute)
-    value = []
-    attribute.map do |k, v|
-      value << v
-    end
-    test = value.join()
+    value = attribute.first
     sql = "SELECT * FROM #{self.table_name} WHERE name = ?"
     DB[:conn].execute(sql, test)
     #binding.pry
