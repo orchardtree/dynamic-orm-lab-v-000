@@ -46,7 +46,7 @@ class InteractiveRecord
   end
   
   def self.find_by_name(name)
-    sql = "SELECT * FROM "
+    sql = "SELECT * FROM #{self.table_name}"
   end
 end
 
