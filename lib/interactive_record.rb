@@ -52,14 +52,12 @@ class InteractiveRecord
   end
   
   def self.find_by(attribute)
-    values = ""
-    attribute.map do |p, v|
-      values << value
+    value = ""
+    attribute.map do |k, v|
+      value = v
     end
-    
-    
     sql = "SELECT * FROM #{self.table_name} WHERE name = ?"
-    DB[:conn].execute(sql, v)
+    DB[:conn].execute(sql, value)
   end
 end
 
