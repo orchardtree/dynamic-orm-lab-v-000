@@ -52,7 +52,7 @@ class InteractiveRecord
   end
   
   def self.find_by(attribute)
-    value = attribute.values.first
+    value = attribute.values.to_i
     sql = "SELECT * FROM #{self.table_name} WHERE name = ?"
     DB[:conn].execute(sql, value)
     
