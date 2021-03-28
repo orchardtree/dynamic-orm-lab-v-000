@@ -40,7 +40,7 @@ class InteractiveRecord
   end
   
   def save
-    
+    sql = "SELECT "
   end
 end
 
