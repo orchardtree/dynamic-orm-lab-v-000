@@ -52,9 +52,9 @@ class InteractiveRecord
   end
   
   def self.find_by(attribute)
-    v = ""
-    attribute.map do |property, value|
-      v = value
+    values = ""
+    attribute.map do |p, v|
+      values << value
     end
     
     
